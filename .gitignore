@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+.eggs/
+
+# Installed packages
+*.log
+*.sqlite3
+
+# Ignore the FFmpeg folder
+ffmpeg-7.1-essentials_build/
+
+# VSCode settings
+.vscode/
+
+# OS-specific files
+.DS_Store

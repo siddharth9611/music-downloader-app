@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #1a1a1a, #333333); /* Dark gradient background */
+    color: #f0f0f0; /* Light text for contrast */
+    margin: 0;
+    padding: 0;
+    padding-top: 300px; /* This should be at least the height of the download section */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Bright yellow for the title */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1s ease-in; /* Fade-in animation */
+}
+
+h2 {
+    margin: 20px 0;
+    color: #ff9800; /* Orange for section headers */
+}
+
+.recommendations,
+.download-section {
+    background-color: rgba(40, 40, 40, 0.9); /* Darker gray background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s ease; /* Slide-in animation */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    width: 100%; /* Set width to 100% to match the container */
+    max-width: 800px; /* Ensure max width aligns with container */
+    margin: 0 auto; /* Center horizontally */
+    min-height: 250px; /* Maintain the old vertical length */
+}
+
+.recommendations ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommendations li,
+.download-section button {
+    background-color: #555; /* Slightly lighter for recommendations */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #ffcc00; /* Bright yellow text */
+    font-weight: bold; /* Make the song names bold */
+}
+
+.recommendations li:hover,
+.download-section button:hover {
+    background-color: #666; /* Lighter gray on hover */
+    transform: translateY(-3px);
+}
+
+/* Fix the download section at the top */
+.download-section {
+    position: fixed; /* Fix the section at the top */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Make sure it's on top of other elements */
+    width: 90%; /* Set to a percentage for responsiveness */
+    max-width: 800px; /* Ensure it doesn't exceed the container width */
+    margin: 20px auto; /* Center it horizontally */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5em; /* Adjust title size for smaller screens */
+    }
+
+    .recommendations,
+    .download-section {
+        padding: 15px; /* Reduce padding on smaller screens */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    #songName,
+    #downloadButton {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 10px 20px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2em; /* Further reduce title size */
+    }
+
+    #songName,
+    #downloadButton {
+        font-size: 12px; /* Further adjust font size */
+        padding: 8px 15px; /* Further adjust padding */
+    }
+}
+
+#songName {
+    padding: 12px 25px;
+    border: 2px solid #ff9800; /* Orange border */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ffffff; /* White text */
+    background-color: #333; /* Dark background for input */
+}
+
+#downloadButton {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800; /* Orange button */
+    color: #ffffff; /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+#downloadButton:hover {
+    background-color: #f57c00; /* Darker orange on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
