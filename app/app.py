@@ -1,6 +1,10 @@
+from app import downloader
+from app import main
+from app import search
+
 from flask import Flask, render_template, request, send_from_directory
 import os
-from downloader import download_audio_from_youtube  # Ensure this function is in your downloader.py
+from app.downloader import download_audio_from_youtube  # Ensure this function is in your downloader.py
 
 app = Flask(__name__)
 
